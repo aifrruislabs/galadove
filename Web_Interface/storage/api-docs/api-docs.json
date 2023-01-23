@@ -1,0 +1,151 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Dove SMS API Documentation",
+        "description": "This is SMS for Dove SMS to Help Developers Test and Integrate to their Apps",
+        "termsOfService": "http://dovesms.aifrruislabs.com/terms/",
+        "contact": {
+            "email": "emasanga@aifrruislabs.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/v1/mobile/interface/login": {
+            "post": {
+                "tags": [
+                    "MOBILE_INTERFACE"
+                ],
+                "summary": "Mobile Interface Login to Get Api Key for Communication",
+                "description": "Mobile Interface Login to Get Api Key for Communication",
+                "operationId": "3e90c6876660713166a94100ef581af1",
+                "parameters": [
+                    {
+                        "name": "smartPhoneId",
+                        "in": "query",
+                        "description": "Enter Smart Phone Id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "description": "Enter Smart Phone Username",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "description": "Enter Smart Phone password",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/v1/get/action/outgoing/sms": {
+            "get": {
+                "tags": [
+                    "OUTGOING_SMS"
+                ],
+                "summary": "Get SMS from Mobile Interface to send them to End Users",
+                "description": "Get SMS from Mobile Interface to send them to End Users",
+                "operationId": "e6e6971c707c6715b628c45ec95e29e8",
+                "parameters": [
+                    {
+                        "name": "apiKey",
+                        "in": "query",
+                        "description": "Enter API Key",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/v1/receive/action/send/sms": {
+            "post": {
+                "tags": [
+                    "OUTGOING_SMS"
+                ],
+                "summary": "Send Your SMS from Your App to this API to Get it In Dove SMS Lifecyle",
+                "description": "Send Your SMS from Your App to this API to Get it In Dove SMS Lifecyle",
+                "operationId": "094d8ac2c9f81ce6a7f08ff02f99e16d",
+                "parameters": [
+                    {
+                        "name": "apiKey",
+                        "in": "query",
+                        "description": "Enter API Key",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "phoneNumber",
+                        "in": "query",
+                        "description": "Enter Recepient Phone Number example : +255712100100",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "messageContent",
+                        "in": "query",
+                        "description": "Enter Message Content to Sent to End Users",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "api_key": {
+                "type": "apiKey",
+                "name": "Authorization",
+                "in": "header"
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "OUTGOING_SMS",
+            "description": "Outgoint SMS APIs"
+        },
+        {
+            "name": "INGOING_SMS",
+            "description": "Ingoint SMS APIs"
+        }
+    ]
+}

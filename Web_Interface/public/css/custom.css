@@ -1,0 +1,81 @@
+table {
+	width: 100%;
+}
+
+.dashboard-link span {
+	color: black;
+}
+
+.dashboard-icon h3 {
+	color: white;
+	margin-top: 50px; 
+}
+
+.dashboard-icon span {
+	font-size: 80px;
+}
+
+.dash-color-01 {
+	background-color: #B0A2EA;
+}
+
+.dash-color-02 {
+	background-color: #98B0A8;
+}
+
+.dash-color-03 {
+	background-color: #B08D20;
+}
+
+.dash-color-04 {
+	background-color: #76D099;
+}
+
+table tr td {
+	padding-top: 15px;
+}
+
+.navbar-custom {
+	background-color: #4BBEA0;
+}
+
+.home-dash-icon {
+	min-height: 200px;
+	border: 2px solid #eeeeee;
+	border-radius: 5px;
+	/*margin: 5px;*/
+}
+
+.navbar-custom a {
+	color: white;
+}
+
+.navbar-custom .dropdown-menu a {
+	color: black;
+}
+
+.float-left {
+	float: left;
+	text-align: left;
+}
+
+.float-right {
+	float: right;
+	text-align: right;
+}
+
+.left {
+	text-align: left;
+}
+
+.center {
+	text-align: center;
+}
+
+.right {
+	text-align: right;
+}
+
+.fa-sized-normal {
+	font-size: 20px;
+}

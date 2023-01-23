@@ -1,0 +1,9 @@
+docker run -it -d \
+  --label traefik.http.routers.dovesms.rule=Host\(\`dovesms.mikoposoft.com\`\) \
+  --label traefik.http.routers.dovesms.tls.certresolver=lets-encrypt \
+  --label traefik.http.routers.dovesms.tls=true \
+  --name dovesms \
+  --network web \
+  --expose 80 \
+  --cap-add SYS_ADMIN \
+    emasanga/dovesms:alpha
