@@ -84,7 +84,7 @@
                     <img src="{{ asset("$pF/pics/logo.jpg") }}">
                 </div>
                 <div class="title m-b-md">
-                    Dove SMS
+                    {{ $appName }}
                 </div>
 
                 <div class="links">
