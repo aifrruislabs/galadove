@@ -31,8 +31,8 @@ class AppServiceProvider extends ServiceProvider
 }        
         //Sharing Data to Views
         View::share([
-            'pF' => '',
-            'appName' => 'Dove SMS',
+            'pF' => pF(),
+            'appName' => 'Gala Dove',
             'copyright' => 'Aifrruis LABS'
             ]);
     }

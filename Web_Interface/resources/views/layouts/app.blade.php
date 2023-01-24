@@ -66,7 +66,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" target="_blank" href="/api/documentation"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;API Docs</a>
+                            <a class="nav-link" target="_blank" href="{{ $pF }}/api/documentation"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;API Docs</a>
                         </li>
 
                         <li class="nav-item">

@@ -88,8 +88,8 @@
                 </div>
 
                 <div class="links">
-                    <a target="_blank" href="https://github.com/aifrruislabs/dovesms">Github</a>
-                    <a target="_blank" href="/api/documentation">API Docs</a>
+                    <a target="_blank" href="https://github.com/aifrruislabs/galadove">Github</a>
+                    <a target="_blank" href="{{ $pF }}/api/documentation">API Docs</a>
                     <a class="nav-link" href="{{ route('terms') }}">Terms</a>    
                 </div>
             </div>
