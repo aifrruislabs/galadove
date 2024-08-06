@@ -1,3 +1,0 @@
-java -jar signapk.jar certificate.pem key.pk8 your-app.apk your-app-signed.apk
-
-java -jar signapk.jar certificate.pem key.pk8 Galadove.apk Galadove-Signed.apk
