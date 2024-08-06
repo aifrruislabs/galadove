@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="galadove">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
         android:allowBackup="true"
@@ -12,7 +11,8 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.GalaDove"
-        tools:targetApi="31">
+        tools:targetApi="34">
+
         <activity
             android:name="com.aifrruislabs.apps.galadove.init.SplashScreen"
             android:exported="true"

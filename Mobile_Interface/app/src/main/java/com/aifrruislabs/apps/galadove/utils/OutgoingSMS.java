@@ -43,10 +43,10 @@ public class OutgoingSMS {
         //Put Request Codes to smsId so We can Track
         //Which Message was Sent and What was Delivered as well
         PendingIntent sentIntent = PendingIntent.getBroadcast(context, 100,  new
-                Intent(SENT_ACTION).putExtra("smsId", smsId), 0);
+                Intent(SENT_ACTION).putExtra("smsId", smsId),  PendingIntent.FLAG_IMMUTABLE);
 
         PendingIntent deliveryIntent = PendingIntent.getBroadcast(context, 200, new
-                Intent(DELIVERED_ACTION).putExtra("smsId", smsId), 0);
+                Intent(DELIVERED_ACTION).putExtra("smsId", smsId), PendingIntent.FLAG_IMMUTABLE);
 
         //Register SENT ACTION Receiver
         context.registerReceiver(new BroadcastReceiver() {

@@ -3,7 +3,9 @@ package com.aifrruislabs.apps.galadove;
 import androidx.appcompat.app.AppCompatActivity;
 import galadove.R;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -40,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Sentry.captureMessage("testing SDK setup");
+
         //Keep Screen On
         getWindow(). addFlags (WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
@@ -72,6 +76,8 @@ public class MainActivity extends AppCompatActivity {
 
                         //Sleep 10 Seconds
                         sleep(10 * 1000);
+
+                        Log.d("GALA_TAG", "Sending SMS Now");
 
                     }catch (InterruptedException interruptedException) {
                         //Send Error to Senty
@@ -137,6 +143,8 @@ public class MainActivity extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
+                        Log.d("GALA_TAG", " Our Error : " + error.getMessage());
+
                         //Toast
                         Toast.makeText(MainActivity.this, getString(R.string.network_error), Toast.LENGTH_SHORT).show();
                     }
@@ -165,5 +173,32 @@ public class MainActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+
+    @Override
+    protected void onPause() {
+        Log.d("GALA_TAG", "The On Pause Called");
+
+        super.onPause();
+        //Restart Activity
+
+        restartActivity();
+    }
+
+    @Override
+    protected void onStop() {
+        Log.d("GALA_TAG", "The On Stop Called");
+
+        super.onStop();
+        //Restart Activity
+
+        restartActivity();
+    }
+
+    public void restartActivity() {
+        //Restart This Intent
+        Intent mainActivityIntent = new Intent(getBaseContext(), MainActivity.class);
+        startActivity(mainActivityIntent);
     }
 }
