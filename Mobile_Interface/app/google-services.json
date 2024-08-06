@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "729043044865",
+    "project_id": "galadove",
+    "storage_bucket": "galadove.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:729043044865:android:9cf9c78e927b13e7050e00",
+        "android_client_info": {
+          "package_name": "com.aifrruislabs.apps.galadove"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCl7tXAwHCFqjZ_-b6OaB-_PDfGG4sPmv0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

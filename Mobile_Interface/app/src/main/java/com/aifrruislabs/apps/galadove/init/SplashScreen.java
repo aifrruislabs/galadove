@@ -5,10 +5,17 @@ import galadove.R;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.aifrruislabs.apps.galadove.MainActivity;
 import com.aifrruislabs.apps.galadove.auth.LoginActivity;
 import com.aifrruislabs.apps.galadove.utils.SessionManager;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class SplashScreen extends AppCompatActivity {
     private Thread delayThread;
